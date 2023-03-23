@@ -1,13 +1,14 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Btn() {
-  return (
-    <Pressable style={styles.btnContainer}>
+export default function Btn({children, onPress}) {
+  
+    return (
+    <Pressable style={styles.btnContainer} onPress={onPress}>
         <View style={styles.btnDisplay}>
-            <Text style={styles.textDisplay}>Ajouter un photographe</Text>
+            <Text style={styles.textDisplay}>{children}</Text>
         </View>
-    </Pressable>
+    </Pressable> 
   )
 }
 

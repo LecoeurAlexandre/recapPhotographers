@@ -11,9 +11,8 @@ export default function HomePageScreen({navigation}) {
             <Text style={styles.textLayout}>Visualisez les informations biographiques et professionnelles importantes de tous les photographes cherbourgeois du XIXème siècle.</Text>
         </View>
         <View style={styles.btnLayout}>
-          <Pressable onPress={() => navigation.navigate('AddPhotographer')}>
-            <Btn style={styles.btnCenter} />
-          </Pressable>
+        <Btn style={styles.btn}>Voir tous les photographes</Btn>
+        <Btn style={styles.btn} onPress={() => navigation.navigate('AddPhotographer', {textContent : "Ajouter un photographe"})}>Ajouter un photographe</Btn>
         </View>  
       </View>
   )
@@ -22,7 +21,10 @@ export default function HomePageScreen({navigation}) {
 const styles = StyleSheet.create({
   homeContainer : {
     flex: 1,
-    backgroundColor: 'black'
+    flexDirection : "column",
+    justifyContent : "space-between",
+    alignItems : "center",
+    backgroundColor: '#2E3138'
   },
   titleLayout : {
     color : "#eee2e2",
@@ -42,9 +44,7 @@ const styles = StyleSheet.create({
   textAreas : {
     alignItems: 'center',
   },
-  btnLayout : {
-    position : 'absolute',
-    bottom : 40,
-    left : '22%'
-  },
+  btn : {
+    marginBottom : 10
+  }
 })
