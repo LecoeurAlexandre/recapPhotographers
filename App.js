@@ -6,6 +6,8 @@ import FormScreen from "./screens/FormScreen";
 import HomePageScreen from "./screens/HomePageScreen";
 import PhotographersList from "./screens/PhotographersList";
 import { StyleSheet } from 'react-native'
+import { Provider } from "react-redux";
+import { store } from "./store/store"
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator()
@@ -31,9 +33,11 @@ function MyDrawer() {
 
 function App() {
   return (
-    <NavigationContainer>
-      <MyStack/>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <MyStack/>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

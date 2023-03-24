@@ -17,4 +17,6 @@ _ React-native
 _ Informations photographes enregistrées dans base de données Firebase
 
 ## Screen shots : ##
-A suivre
+![Screen page d'accueil](./assets/screens/accueil.png)
+![Screen formulaire](./assets/screens/form.png)
+

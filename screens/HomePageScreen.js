@@ -10,9 +10,11 @@ export default function HomePageScreen({navigation}) {
           <Text style={styles.titleLayout}>Photographes de Cherbourg (XIXème siècle)</Text>
             <Text style={styles.textLayout}>Visualisez les informations biographiques et professionnelles importantes de tous les photographes cherbourgeois du XIXème siècle.</Text>
         </View>
-        <View style={styles.btnLayout}>
-        <Btn style={styles.btn}>Voir tous les photographes</Btn>
-        <Btn style={styles.btn} onPress={() => navigation.navigate('AddPhotographer', {textContent : "Ajouter un photographe"})}>Ajouter un photographe</Btn>
+        <View>
+          <Btn style={styles.btn} onPress={() => navigation.navigate('Photographers', {textContent : "Ajouter un photographe"})}>Voir tous les photographes</Btn>
+        </View>
+        <View>
+          <Btn style={styles.btn} onPress={() => navigation.navigate('AddPhotographer', {textContent : "Ajouter un photographe"})}>Ajouter un photographe</Btn>
         </View>  
       </View>
   )
@@ -22,12 +24,13 @@ const styles = StyleSheet.create({
   homeContainer : {
     flex: 1,
     flexDirection : "column",
-    justifyContent : "space-between",
+    justifyContent : "space-around",
     alignItems : "center",
     backgroundColor: '#2E3138'
   },
   titleLayout : {
     color : "#eee2e2",
+    fontWeight : "bold",
     fontSize : 25,
     fontFamily : 'cursive',
     marginTop : 20,
@@ -39,12 +42,9 @@ const styles = StyleSheet.create({
     margin : 5,
     padding : 5,
     borderColor : '#eee2e2',
-    borderWidth : 2
+    borderWidth : 2,
   },
   textAreas : {
     alignItems: 'center',
   },
-  btn : {
-    marginBottom : 10
-  }
 })

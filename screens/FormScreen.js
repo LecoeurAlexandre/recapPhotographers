@@ -36,7 +36,6 @@ export default function FormScreen() {
       throw new Error("Il y a eu une erreur lors de l'ajout d'une tâche !")
     }
 
-    //const data = await response.json()
   }
   
   

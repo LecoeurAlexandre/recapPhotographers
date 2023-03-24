@@ -19,13 +19,13 @@ const styles = StyleSheet.create({
         
     },
     btnDisplay: {
-        backgroundColor : "#644536",
+        backgroundColor : "#eee2e2",
         padding : 8,
         borderRadius : 5
         
     },
     textDisplay: {
-        color : "#eee2e2",
+        color : "#2E3138",
         fontSize : 20 
     }
 })
