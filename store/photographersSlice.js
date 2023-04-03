@@ -7,7 +7,7 @@ const photographers = createSlice({
     },
     reducers : {
         addPhotographer : (state, action) => {
-            state.photographers.push(action.payload)
+            state.photographers=action.payload
         }
     }
 })
